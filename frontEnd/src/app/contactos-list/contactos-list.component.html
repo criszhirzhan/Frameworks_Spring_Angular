@@ -1,0 +1,29 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Numero</th>
+            <th scope="col">Operadora</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Propietario</th>
+            <th scope="col">Accion</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let telefono of telefonos">
+            <td>{{ telefono.numero }}</td>
+            <td>{{ telefono.operadora }}</td>
+            <td>{{ telefono.tipo }}</td>
+            <td>{{ telefono.usuario.nombre }} {{ telefono.usuario.apellido }}</td>
+            <td >
+              <button (click)="Editar(telefono)" class="btn btn-warning">Editar</button>
+              <button (click)="Delete(telefono)" style="margin-left: 10px" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

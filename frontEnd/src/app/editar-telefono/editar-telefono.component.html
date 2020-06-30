@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<body>
+
+	<div class="cuerpo">
+		<div class="contenedor">
+
+
+			<form >
+				<div class="container">
+					<h1>Editar contacto:</h1>
+					<hr>
+
+					<label for="tipo"><b>Tipo</b></label>
+					
+					<div class="container mt-3">
+						<select [(ngModel)]="telefono.tipo"  name="tip"  class="custom-select mb-3">
+							<option selected>{{ telefono.tipo }}</option>
+							<option value="Fijo">Fijo</option>
+							<option value="Movil">Movil</option>
+						</select>
+					</div>
+
+					<label for="numero"><b>Numero</b></label> <input id="numerosID" type="text"
+					[(ngModel)]="telefono.numero" placeholder="Ingresar el numero" name="numerotxt" required>
+
+
+					<label for="operadora"><b>Operadora</b></label> 
+
+					<div class="container mt-3">
+						<select [(ngModel)]="telefono.operadora"  name="tip"  class="custom-select mb-3">
+							<option selected>{{ telefono.operadora }}</option>
+							<option value="Movistar">Movistar</option>
+							<option value="Tuenti">Tuenti</option>
+							<option value="Cnt">Cnt</option>
+							<option value="Claro">Claro</option>
+							<option value="Etapa">Etapa</option>
+						</select>
+					</div>
+
+					<hr>
+
+					<button type="submit" (click)="Actualizar(telefono)"  value="registrarTelf" name="registrartelf"
+						class="registerbtn">Actualizar</button>
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+</body>
+
+</html>

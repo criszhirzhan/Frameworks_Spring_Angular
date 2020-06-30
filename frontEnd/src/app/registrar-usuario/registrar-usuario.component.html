@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href="/ProjectJPA2/config/styles/stylesCrUser.css"> -->
+<script type="text/javascript" src="/ProjectJPA2/config/JS/validaciones.js"></script>
+</head>
+<body>
+
+	<br>
+	
+	
+
+	<div class="cuerpo">
+		<div class="contenedor">
+			<form (ngSubmit)="onSubmit()" #userForm="ngForm" >
+				<div class="container">
+					<p>Por favor complete este formulario para crear una cuenta.</p>
+					<hr>
+
+					<label for="cedula"><b>Cedula</b></label> <input id="cedulaID" type="text"
+					    [(ngModel)]="user.cedula" placeholder="Ingresar cedula"  name="cedula"  required>  <label
+						for="nombres"><b>Nombres</b></label> <input id="nombresID" type="text"
+						[(ngModel)]="user.nombre"  placeholder="Ingresar nombres"  name="nombres"  required> <label
+						for="apellidos"><b>Apellidos</b></label> <input id="apellidosID" type="text"
+						[(ngModel)]="user.apellido"  placeholder="Ingresar apellidos"  name="apellidos"   required>
+
+					<label for="email"><b>Email</b></label> <input id="emailID" type="text"
+					     [(ngModel)]="user.correo"  placeholder="Ingresar email"  name="email" required><br>
+						 <label
+						for="psw"><b>Contraseña</b></label> <input id="passID" type="password"
+						 [(ngModel)]="user.contrasena" placeholder="Ingresar contraseña"  name="psw" required> 
+					<hr>
+
+					<button type="submit" [disabled]="!userForm.form.valid" class="registerbtn" name="registrarUsr"
+						value="RegistrarUsr">Registrar</button>
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>
+
+</body>
+</html>

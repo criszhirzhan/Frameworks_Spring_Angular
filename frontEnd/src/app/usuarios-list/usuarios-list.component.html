@@ -1,0 +1,23 @@
+<div class="card my-5">
+    <div class="card-body">
+      <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">cedula</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Correo</th>
+  
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.cedula }}</td>
+            <td>{{ user.nombre }}</td>
+            <td>{{ user.apellido }}</td>
+            <td><a href="mailto:{{ user.correo }}">{{ user.correo }}</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
